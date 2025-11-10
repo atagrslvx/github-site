@@ -332,9 +332,9 @@ struct ContentView: View {
                         .background(Color.white.opacity(0.1))
                         .cornerRadius(8)
                         .foregroundColor(.white)
-                        .onChange(of: viewModel.salt) { _, _ in
+                        .onChange(of: viewModel.salt, perform: { _ in
                             viewModel.updatePreview()
-                        }
+                        })
                 }
             }
         }

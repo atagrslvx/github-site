@@ -65,7 +65,8 @@ struct DataRow: Identifiable, Equatable {
 }
 
 /// İçe aktarılan veri seti
-struct ImportedDataset {
+struct ImportedDataset: Identifiable, Equatable {
+    let id = UUID()
     let format: FileFormat
     let columns: [String]
     var rows: [DataRow]
@@ -81,6 +82,10 @@ struct ImportedDataset {
     
     var columnCount: Int {
         columns.count
+    }
+    
+    static func == (lhs: ImportedDataset, rhs: ImportedDataset) -> Bool {
+        lhs.id == rhs.id
     }
 }
 
@@ -100,7 +105,7 @@ struct MaskingProfile: Codable {
 }
 
 /// Maskeleme sonucu
-struct MaskingResult {
+struct MaskingResult: Equatable {
     let dataset: ImportedDataset
     let maskedCount: Int
     let totalCells: Int
@@ -109,6 +114,10 @@ struct MaskingResult {
     var percentage: Double {
         guard totalCells > 0 else { return 0 }
         return Double(maskedCount) / Double(totalCells) * 100
+    }
+    
+    static func == (lhs: MaskingResult, rhs: MaskingResult) -> Bool {
+        lhs.dataset == rhs.dataset && lhs.maskedCount == rhs.maskedCount
     }
 }
 

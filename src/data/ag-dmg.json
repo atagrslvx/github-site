@@ -1,5 +1,5 @@
 {
   "defaultPath": "/downloads/ag-veri-maskeleme.dmg",
-  "sha256": "07fe76e88c87209093136bb5bc258c2808f9ff20dca90ae6045bec1d4e56f25f",
+  "sha256": "6a581a3872d3f5ce34f16cbfcc4f23504589c5c5798068e1064f2737a918d348",
   "note": "DMG file is stored in dist/downloads/ and should be uploaded to GitHub Releases or external hosting"
 }
