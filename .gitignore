@@ -26,3 +26,6 @@ pnpm-debug.log*
 # Large DMG files - specific files only
 public/downloads/ag-veri-maskeleme.dmg
 dist/downloads/ag-veri-maskeleme.dmg
+
+# SwiftUI App Build Files
+apps/AGVeriMaskeleme/build/

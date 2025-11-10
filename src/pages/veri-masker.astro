@@ -7,8 +7,8 @@ import DataMaskingApp from '../components/DataMaskingApp';
 ---
 
 <Layout
-  title="Veri Masker · macOS Veri Maskeleme Aracı"
-  description="Veri Masker ile CSV/JSON dosyalarındaki hassas alanları saniyeler içinde maskeleyin, hashleyin ve paylaşılabilir çıktılar oluşturun."
+  title="AG Veri Maskeleme · macOS Native Veri Maskeleme Uygulaması"
+  description="AG Veri Maskeleme ile CSV/JSON dosyalarındaki hassas alanları modern SwiftUI arayüzü ile maskeleyin. KVKK/GDPR uyumlu, offline çalışır."
 >
   <ScrollProgress client:load />
   <Navbar client:load />
@@ -18,13 +18,13 @@ import DataMaskingApp from '../components/DataMaskingApp';
       <div class="container-custom grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
         <div class="space-y-6">
           <span class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary-500/10 text-primary-200 text-sm font-semibold">
-            Veri Masker v0.2.0
+            AG Veri Maskeleme v1.0.0
           </span>
           <h1 class="text-4xl md:text-5xl font-bold text-dark-50 leading-tight">
-            macOS üzerinde KVKK uyumlu veri maskeleme, <br class="hidden md:block" /> tek pakette.
+            Native SwiftUI ile geliştirilen <br class="hidden md:block" /> profesyonel veri maskeleme aracı.
           </h1>
           <p class="text-lg text-dark-300 max-w-2xl">
-            CSV ve JSON dosyalarındaki hassas verileri maskeleyen macOS uygulaması. Ad-hoc signed, Gatekeeper uyumlu.
+            Modern SwiftUI arayüzü, 4 farklı maskeleme stratejisi, canlı önizleme ve demo veri ile kullanıma hazır macOS uygulaması.
           </p>
           <div class="flex flex-wrap gap-4">
             <a href="#masking-app" class="btn-primary">
@@ -42,14 +42,15 @@ import DataMaskingApp from '../components/DataMaskingApp';
         </div>
         <div class="glass-card border border-primary-500/20 rounded-3xl p-8 space-y-4">
           <p class="text-sm uppercase tracking-wide text-primary-200">v0.2.0 Güncellemesi</p>
-          <h2 class="text-2xl font-semibold text-dark-50">Artık "Hasarlı" Hatası Yok</h2>
+          <h2 class="text-2xl font-semibold text-dark-50">SwiftUI Native App</h2>
           <p class="text-dark-300 text-sm leading-relaxed">
-            DMG ad-hoc code signing ile imzalandı. macOS Gatekeeper uyarısı almadan doğrudan kurabilirsiniz.
+            Tamamen Swift ile yazılmış, modern SwiftUI arayüzüne sahip native macOS uygulaması. Electron değil, gerçek native performans.
           </p>
           <ul class="text-sm text-dark-400 space-y-2 list-disc list-inside">
-            <li>100 MB DMG (Apple Silicon optimized)</li>
-            <li>SHA-256 doğrulaması mevcut</li>
-            <li>GitHub Release'ten güvenli indirme</li>
+            <li>SwiftUI modern arayüz</li>
+            <li>CryptoKit ile güvenli maskeleme</li>
+            <li>Offline-first, hiçbir veri gönderilmez</li>
+            <li>macOS 13.0+ (Ventura) Apple Silicon</li>
           </ul>
         </div>
       </div>

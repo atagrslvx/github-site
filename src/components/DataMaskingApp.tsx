@@ -16,26 +16,26 @@ import agDmgMeta from '../data/ag-dmg.json';
 
 const features = [
   {
-    title: 'SwiftUI native arayüz',
-    description: 'Drag & drop, macOS komutları, canlı ön izleme ve demo datası ile kusursuz deneyim.',
+    title: 'Native SwiftUI App',
+    description: 'Tamamen Swift ile yazılmış, modern gradient UI, smooth animations. Electron değil, gerçek native.',
     icon: ShieldCheck,
   },
   {
-    title: 'Çevrimdışı güvenlik',
-    description: 'Uygulama tamamen lokal çalışır; verilerini dış servislere göndermeden KVKK uyumlu çıktı üretir.',
+    title: 'Offline & Güvenli',
+    description: 'App Sandbox, CryptoKit şifreleme. Tüm işlemler yerel cihazda, hiçbir veri dışarı gönderilmez.',
     icon: Lock,
   },
   {
-    title: 'Esnek stratejiler',
-    description: 'Kolon bazlı mask, hash (SHA-256), randomize ve redact seçenekleri.',
+    title: '4 Maskeleme Stratejisi',
+    description: 'Kısmi maskeleme, SHA-256 hash, rastgele ve tamamen gizle. Akilli email/IBAN/telefon tespit.',
     icon: Cpu,
   },
 ];
 
 const steps = [
-  { title: 'Verini içeri al', detail: 'CSV/JSON dosyanı veya örnek dataseti seç' },
-  { title: 'Kolonları tanımla', detail: 'TC kimlik, email, telefon gibi alanları seç ve strateji belirle' },
-  { title: 'Maskele & doğrula', detail: 'Çıktıyı indir, SHA-256 ile doğrula ve paylaş' },
+  { title: 'Dosya seç veya demo yükle', detail: 'CSV/JSON dosyasını sürükle-bırak veya hazır demo veri ile test et' },
+  { title: 'Kolonları seç & strateji belirle', detail: 'Hassas kolonlar otomatik seçilir. Canlı önizleme ile sonucu gör' },
+  { title: 'Maskele & export et', detail: 'İşlem istatistikleri ile birlikte CSV veya JSON olarak kaydet' },
 ];
 
 const dmgUrl = import.meta.env.PUBLIC_AG_DMG_URL?.trim() || agDmgMeta.defaultPath;
@@ -67,10 +67,10 @@ const DataMaskingApp = () => {
             <ShieldCheck className="w-4 h-4" />
             KVKK uyumlu veri maskeleme
           </span>
-          <h2 className="section-title mb-4">macOS için Veri Masker Beta</h2>
+          <h2 className="section-title mb-4">AG Veri Maskeleme - Native macOS App</h2>
           <p className="section-subtitle">
-            Hassas verileri paylaşılabilir hale getirmek için geliştirdiğim masaüstü uygulamasını DMG formatında indirip
-            kullanabilirsin. GUI arayüzü CLI gereksinimini ortadan kaldırır.
+            SwiftUI ile geliştirilmiş profesyonel veri maskeleme uygulaması. Modern arayüz, hızlı performans ve tam güvenlik.
+            DMG formatında indirip hemen kullanmaya başlayabilirsin.
           </p>
         </motion.div>
 
@@ -132,11 +132,11 @@ const DataMaskingApp = () => {
                 <ul className="space-y-3 text-sm text-dark-300">
                   <li className="flex items-center gap-2">
                     <FileCode className="w-4 h-4 text-primary-400" />
-                    macOS 12+ · Universal DMG · SwiftUI / AppKit native
+                    macOS 13.0+ (Ventura) · Apple Silicon · Native SwiftUI
                   </li>
                   <li className="flex items-center gap-2">
                     <Terminal className="w-4 h-4 text-primary-400" />
-                    Drag & drop dosya seçimi, canlı ön izleme, demo datası
+                    Modern UI, gradient design, smooth animations, dark theme
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-primary-400" />

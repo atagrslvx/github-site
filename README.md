@@ -22,24 +22,38 @@ Modern, performant ve animasyonlu portfolio sitesi. Astro, React, Tailwind CSS v
 - 🧭 **Tech Radar** - @nivo/radar ile görselleştirilen beceri yoğunluk haritası
 - 📈 **GitHub Aktivitesi** - atagrslvx hesabından gerçek zamanlı katkı özetleri + sparkline trendi
 - 🧑‍💻 **Dinamik Proje Feed'i** - atagrsl reposundan build-time'da çekilen showcase listesi
-- 💾 **AG Veri Maskeleme SwiftUI App** - apps/ag-veri-maskeleme altında native macOS DMG üretimi; scripts/notarize-ag-dmg.sh ile notarize süreci
+- 💾 **AG Veri Maskeleme** - Native SwiftUI macOS uygulaması, 4 maskeleme stratejisi, modern gradient UI, offline-first
 
-### AG Veri Maskeleme Projesi
-SwiftUI tabanlı macOS uygulaması `apps/ag-veri-maskeleme/` dizininde tutulur.
+### AG Veri Maskeleme - Native SwiftUI App
+Profesyonel veri maskeleme uygulaması `apps/AGVeriMaskeleme/` dizininde.
 
+**Özellikler:**
+- SwiftUI modern arayüz (gradient, dark theme, smooth animations)
+- 4 maskeleme stratejisi (kısmi, hash, rastgele, redact)
+- CSV/JSON parser & export
+- Canlı önizleme & demo veri
+- CryptoKit şifreleme
+- App Sandbox security
+
+**Build & Deploy:**
 ```bash
-cd apps/ag-veri-maskeleme
-swift run
+cd apps/AGVeriMaskeleme
+
+# Debug build (test için)
+./build.sh debug
+
+# Release build (DMG ile)
+./build.sh release
+
+# DMG'yi siteye kopyala
+cp build/AG-Veri-Maskeleme.dmg ../../public/downloads/ag-veri-maskeleme.dmg
+
+# Metadata güncelle
+cd ../..
+node scripts/update-dmg.mjs apps/AGVeriMaskeleme/build/AG-Veri-Maskeleme.dmg
 ```
 
-DMG üretip siteye koymak için:
-
-1. Xcode ile Release build & DMG oluştur.
-2. `scripts/notarize-ag-dmg.sh /path/to/AG\ Veri\ Maskeleme.dmg` komutunu çalıştır (APPLE_ID, APPLE_TEAM_ID, APPLE_APP_PASSWORD değişkenlerini ayarla).
-3. `scripts/update-dmg.mjs` ile DMG’yi `public/downloads/ag-veri-maskeleme.dmg` üzerine kopyala ve hash değerini otomatik güncelle:
-   ```bash
-   node scripts/update-dmg.mjs /path/to/AG\ Veri\ Maskeleme.dmg
-   ```
+Detaylı dokümantasyon: `apps/AGVeriMaskeleme/README.md`
 
 ## 🛠️ Tech Stack
 
