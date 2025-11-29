@@ -4,6 +4,7 @@ import ScrollProgress from '../components/ScrollProgress';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import DataMaskingApp from '../components/DataMaskingApp';
+import ProfileAssistant from '../components/ProfileAssistant';
 ---
 
 <Layout
@@ -238,5 +239,6 @@ import DataMaskingApp from '../components/DataMaskingApp';
   </main>
 
   <DataMaskingApp client:visible />
+  <ProfileAssistant client:load />
   <Footer client:visible />
 </Layout>

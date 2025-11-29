@@ -77,7 +77,9 @@ const Skills = () => {
 
   const activeCategory = skillCategories[activeTab];
   const marqueeDuration = Math.max(activeCategory.skills.length * 2.5, 18);
-  const marqueeStyle: CSSProperties = { animationDuration: `${marqueeDuration}s` };
+  const marqueeStyle: CSSProperties = {
+    ['--marquee-duration' as string]: `${marqueeDuration}s`,
+  };
 
   const scrollTabs = (direction: 'left' | 'right') => {
     if (!tabListRef.current) return;

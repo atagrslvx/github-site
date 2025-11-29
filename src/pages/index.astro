@@ -11,6 +11,7 @@ import Certifications from '../components/Certifications';
 import Projects from '../components/Projects';
 import { fetchShowcaseProjects } from '../utils/projects';
 import Footer from '../components/Footer';
+import ProfileAssistant from '../components/ProfileAssistant';
 const projects = await fetchShowcaseProjects();
 ---
 
@@ -24,5 +25,6 @@ const projects = await fetchShowcaseProjects();
   <Education client:visible />
   <Certifications client:visible />
   <Projects client:visible projects={projects} />
+  <ProfileAssistant client:load />
   <Footer client:visible />
 </Layout>
